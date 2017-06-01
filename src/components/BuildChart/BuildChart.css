@@ -1,0 +1,46 @@
+.builds {
+  float: right;
+}
+.Test {
+  border: 1px solid #262626;
+  cursor: default;
+  display: block;
+  float: left;
+  height: 32px;
+  width: 32px;
+  position: relative;
+  text-align: center;
+  background: #eee;
+}
+
+.Test:hover {
+  border-color: #fff;
+}
+
+.Test.failed {
+  background: rgb(237, 92, 92);
+}
+
+.Test.running {
+  background: blue;
+}
+
+.Test.success {
+  background: #42C88A;
+}
+
+.Test.passed {
+  background: #42C88A;
+}
+
+.Test.fixed {
+  background: #42C88A;
+}
+
+.Text.retried {
+  background: #898989;
+}
+
+.Text.scheduled {
+  background: #ab7fd1;
+}
