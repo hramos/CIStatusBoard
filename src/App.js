@@ -1,22 +1,19 @@
-import { RefreshIntervals } from './Constants';
-import React from 'react';
-import CircleStatus
-  from './components/CircleStatus/CircleStatus';
-import TravisStatus
-  from './components/TravisStatus/TravisStatus';
-import './App.css';
+import { RefreshIntervals } from "./Constants";
+import React from "react";
+import CircleStatus from "./components/CircleStatus/CircleStatus";
+import "./App.css";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      secondsUntilNextReload: RefreshIntervals.PAGE / 1000,
+      secondsUntilNextReload: RefreshIntervals.PAGE / 1000
     };
   }
 
   componentDidMount() {
     setTimeout(
-      'window.location.href=window.location.href;',
+      "window.location.href=window.location.href;",
       RefreshIntervals.PAGE
     );
 
@@ -30,8 +27,7 @@ class App extends React.Component {
 
   tick() {
     this.setState(prevState => ({
-      secondsUntilNextReload: prevState.secondsUntilNextReload -
-        1,
+      secondsUntilNextReload: prevState.secondsUntilNextReload - 1
     }));
   }
 
@@ -39,23 +35,15 @@ class App extends React.Component {
     return (
       <div className="App">
         <CircleStatus />
-        <TravisStatus />
         <br />
         <small>
-          Build status is updated every
-          {' '}
-          {RefreshIntervals.STATUS / 1000}
-          {' '}
+          Build status is updated every {RefreshIntervals.STATUS / 1000}{" "}
           seconds.
         </small>
         <br />
         <small>
-          Forcing page reload in
-          {' '}
-          {this.state.secondsUntilNextReload}
-          {' '}
-          second
-          {this.state.secondsUntilNextReload > 1 ? 's' : ''}
+          Forcing page reload in {this.state.secondsUntilNextReload} second
+          {this.state.secondsUntilNextReload > 1 ? "s" : ""}
           .
         </small>
       </div>
