@@ -1,14 +1,11 @@
 .builds {
-  float: right;
 }
 .Test {
   border: 1px solid #262626;
   cursor: default;
   display: block;
-  float: left;
   height: 32px;
-  width: 32px;
-  position: relative;
+  width: 128px;
   text-align: center;
   background: #eee;
 }
@@ -26,15 +23,15 @@
 }
 
 .Test.success {
-  background: #42C88A;
+  background: #42c88a;
 }
 
 .Test.passed {
-  background: #42C88A;
+  background: #42c88a;
 }
 
 .Test.fixed {
-  background: #42C88A;
+  background: #42c88a;
 }
 
 .Text.retried {
